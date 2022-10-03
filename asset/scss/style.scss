@@ -130,7 +130,7 @@ a{
         }
         &--accesomovil{
             width: 15rem;
-            background: url("/asset/img/icon/logo-accesomovil.svg") center no-repeat;
+            background: url("../img/icon/logo-accesomovil.svg") center no-repeat;
             background-size: 15rem;
             &:hover::before{
                 display: none;
@@ -150,7 +150,7 @@ body{
     margin-top: 5rem;
     
     &__container{
-        background-image: url("/asset/img/max-simonov-Zxxxrc4a7uY-unsplash.jpg");
+        background-image: url("../img/max-simonov-Zxxxrc4a7uY-unsplash.jpg");
         background-repeat: no-repeat;
         background-position: right;
         background-size: 130%;
