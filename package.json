@@ -1,15 +1,15 @@
 {
   "name": "preentrega3",
   "version": "1.0.0",
-  "description": "",
+  "description": "Acceso Movil, proyecto de desarrollo web sobre accesorios para smartphones",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build-css": "node-sass --include-path scss scss/style.scss css/main.css",
     "watch-css": "nodemon -e scss -x \"npm run build-css\""
   },
-  "keywords": [],
-  "author": "",
+  "keywords": [fundas, celulares, case, smartphone, comecable, templados, auriculares, popsocket],
+  "author": "Matias Romero",
   "license": "ISC",
   "devDependencies": {
     "node-sass": "^7.0.3",
