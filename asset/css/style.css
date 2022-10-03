@@ -1,0 +1,216 @@
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  scroll-behavior: smooth;
+  font-size: 10px;
+}
+
+::-webkit-scrollbar {
+  width: 0.8rem;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #fff;
+}
+
+::-webkit-scrollbar-thumb {
+  background: hsl(215deg, 100%, 70%);
+  border-radius: 5px;
+}
+
+a {
+  display: block;
+  text-decoration: none;
+}
+
+.header {
+  width: 100%;
+  position: fixed;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  top: 0;
+  z-index: 1400;
+  height: 6rem;
+  background-color: rgba(255, 255, 255, 0.93);
+  -webkit-backdrop-filter: blur(1rem);
+          backdrop-filter: blur(1rem);
+  border-bottom: 0.2px solid rgba(212, 212, 212, 0.575);
+  box-shadow: 1px 2px 5px 1px rgba(0, 0, 0, 0.2);
+  margin: 0 auto;
+  padding: 0 2.2rem;
+}
+.header__search {
+  width: 70%;
+  margin: 0 auto;
+  padding: 0 4.2rem;
+  position: relative;
+}
+.header__searchlink {
+  position: absolute;
+  left: 1.2rem;
+  opacity: 0.5;
+}
+.header___searchform {
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+.header__searchinput {
+  padding-left: 2rem;
+  margin-top: 1rem;
+  width: 100%;
+  height: 4rem;
+  outline: none;
+  border: 1px solid hsl(215deg, 100%, 70%);
+  border-radius: 2rem;
+  font-size: 1.6rem;
+}
+.header__link-close {
+  position: absolute;
+  top: 0;
+  right: 1.2rem;
+  opacity: 0.5;
+  cursor: pointer;
+  transition: all 0.4s;
+}
+
+.nav {
+  margin: 0 auto;
+  padding: 0 1rem;
+  max-width: 110rem;
+}
+.nav__menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  line-height: 6rem;
+  list-style: none;
+  margin: 0 -1rem;
+  padding: 0 10px;
+}
+.nav__menu--mobile {
+  display: none;
+}
+.nav__link {
+  color: hsla(0deg, 1%, 30%, 0.878);
+  font-size: 1.3rem;
+  height: 6rem;
+  display: block;
+  position: relative;
+  transition: opacity 0.4s;
+}
+.nav__link::before {
+  content: "";
+  position: absolute;
+  display: block;
+  right: 0;
+  bottom: -1rem;
+  width: 100%;
+  height: 0.2rem;
+  margin-bottom: 1rem;
+  transform: scaleX(0);
+  transition: transform 0.4s ease;
+  background-color: hsl(215deg, 100%, 70%);
+}
+.nav__link:hover {
+  opacity: 0.7;
+}
+.nav__link:hover::before {
+  margin-bottom: 1rem;
+  transform: scaleX(1);
+}
+.nav__link--accesomovil {
+  width: 15rem;
+  background: url("/asset/img/icon/logo-accesomovil.svg") center no-repeat;
+  background-size: 15rem;
+}
+.nav__link--accesomovil:hover::before {
+  display: none;
+}
+
+body {
+  background-color: #fff;
+}
+
+.hero {
+  display: flex;
+  width: 100%;
+  height: 70vh;
+  background-size: cover;
+  margin-top: 5rem;
+}
+.hero__container {
+  background-image: url("/asset/img/max-simonov-Zxxxrc4a7uY-unsplash.jpg");
+  background-repeat: no-repeat;
+  background-position: right;
+  background-size: 130%;
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+  width: 100%;
+  margin: 0 auto;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+.hero__title {
+  font-size: 10rem;
+  font-weight: 400;
+  display: flex;
+  flex-direction: column;
+  text-align: right;
+  margin-right: 3rem;
+}
+.hero__title-sub-head {
+  color: #ffffff;
+  font-size: 1.5rem;
+  padding-top: 3rem;
+}
+.hero__title-head {
+  color: #e7e5e5;
+  padding: 1.5rem;
+  font-size: 2.5rem;
+  padding-bottom: 1rem;
+}
+.hero__title-h1 {
+  padding-top: 1rem;
+  font-size: 4rem;
+  color: #ffffff;
+}
+.hero .cta {
+  display: block;
+  justify-self: center;
+  align-items: center;
+  color: rgb(255, 255, 255);
+  background-color: #045a25;
+  width: 8rem;
+  height: 2rem;
+}
+
+.progress-bar {
+  display: none;
+  width: 100%;
+  height: 0.1rem;
+  margin-top: 5rem;
+  background: linear-gradient(90deg, #ffd33d, #ea4aaa 17%, #b34bff 34%, #01feff 51%, #ffd33d 68%, #ea4aaa 85%, #b34bff);
+  background-size: 300% 100%;
+  -webkit-animation: progress-animation 3s linear infinite;
+          animation: progress-animation 3s linear infinite;
+}
+
+@-webkit-keyframes progress-animation {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 100% 0;
+  }
+}
+
+@keyframes progress-animation {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 100% 0;
+  }
+}
