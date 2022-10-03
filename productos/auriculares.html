@@ -4,60 +4,92 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Acceso Movil - Auriculares</title>
-    <link rel="icon" href="../img/favicon.ico" type="ico"/>
-    <link rel="stylesheet" href="../css/estilo.css">
-    <!--CSS bootstrap-->
-    <script src=""></script>
-    
+    <title>Auriculares - Acceso Movil</title>
+    <link rel="icon" href="./asset/img/icon/favicon.ico" type="ico"/>
     <script src="https://kit.fontawesome.com/5ad47a4490.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Michroma&family=Sen:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../asset/css/style.css"">
     <script defer src="../js/main.js"></script>
 </head>
 <body>
-    <header class="header">
-        <div class="back">
-        <nav class="nav">
-            <ul class="nav-menu">
-                    <button class="nav-toggle" aria-label="Abrir menú">
-                    <i class="fa-solid fa-bars"></i>
-                    </button>
-                    <li><a href="../index.html" class="nav-logo"><img src="../img/ACCESO MOVIL-recortado.png" alt="acceso movil"></a></li>
-                    <div>
-                    <button class="nav-login"><i class="fa-solid fa-face-laugh-beam"></i></button>
-                    <button class="nav-shopping"><i class="fa-solid fa-cart-shopping"></i></button>
-                    </div>
-                    <li class="nav-menu-item"><a href="../views/fundas.html" class="nav-menu-link">Fundas</a></li>
-                    <li class="nav-menu-item"><a href="../views/auriculares.html" class="nav-menu-link">Auriculares</a></li>
-                    <li class="nav-menu-item"><a href="../views/popsockets.html" class="nav-menu-link">Popsockets</a></li>
-                    <li class="nav-menu-item"><a href="../views/comecable.html" class="nav-menu-link link-hide">Comecable</a></li>
-                    <li class="nav-menu-item"><a href="../views/templado.html" class="nav-menu-link link-hide">Templados</a></li>
-                    <li class="nav-menu-item"><a href="../views/arosdeluz.html" class="nav-menu-link link-hide">Aros de luz</a></li>
-                    <li class="more">
-                        <a href="" class="nav-menu-link" id="bmore">Mas</a>
-                        <div class="menu-more">
-                            <a href="../views/comecable.html">Comecable</a>
-                            <a href="../views/templado.html">Templados</a>
-                            <a href="../views/arosdeluz.html">Aros de luz</a>
+    
+    <header class="header" id="header">
+        <div class="header__container">
+            <nav class="nav">
+
+                <ul class="nav__menu nav__menu--mobile">
+                    <li class="nav__item">
+                        <div class="mobile__menu">
+                            <span class="line line--top"></span>
+                            <span class="line line--bottom"></span>
                         </div>
                     </li>
-            </ul>
-            <ul class="search">
-                <li><a class="nav-menu-link" href="">Buscar</a></li>
-                <li><a class="nav-menu-link" href="">Carrito</a></li>
-                <li><a class="nav-menu-link" href="../views/registro.html">Login</a></li>
-            </ul>
-        </nav>
-    </div>
-    <div class="container">
-        <form action="" class="rowm-5">
+                    <li class="nav__item">
+                        <a href="../index.html" class="nav__link nav__link--accesomovil"></a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="" class="nav__link nav__link--bagshop"></a>
+                    </li>
+                    
+                </ul>
 
-        <div class="col-6 m-5">
-            <input type="email" class="form-control" id="emailInput" placeholder="Escribe tu email">
+                <ul class="nav__menu nav__menu--desktop">
+
+                    <li class="nav__item nav__item--hidden">
+                        <a href="../index.html" class="nav__link nav__link--accesomovil"></a>
+                    </li>
+
+                    <li class="nav__item">
+                        <a href="./fundas.html" class="nav__link">Fundas</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="./auriculares.html" class="nav__link nav__link">Auriculares</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="./comecable.html" class="nav__link nav__link">Comecable</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="./popsockets.html" class="nav__link nav__link">Popsockets</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="./templado.html" class="nav__link nav__link">Templados</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="./arosdeluz.html" class="nav__link nav__link">Aros de luz</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#" class="nav__link nav__link--search"></a>
+                    </li>
+                    <li class="nav__item nav__item--hidden">
+                        <a href="" class="nav__link nav__link--bagshop"></a>
+                    </li>
+                </ul>
+            </nav>
+        
+            <div class="header__search" style="display: none;">
+                <div class="header__searchlink"></div>
+                <div class="header__searchbar">
+                    <form action="" class="header__searchform"><input type="text" placeholder="Busca tu estilo" class="header__searchinput"></form>
+                </div>
+                <div class="header__link-close"></div>
+
+                <div class="header__quick-link">
+                    <h2>Enlaces Rápidos</h2>
+                    <ul>
+                        <li>
+                            <a href="productos/fundas.html">Fundas</a></li>
+                        <li>
+                            <a href="productos/auriculares.html">Auriculares</a></li>
+                        <li>
+                            <a href="contacto/contacto.html">Contacto</a></li>
+                    </ul>
+                </div>
+            </div>
         </div>
-        </form>
-    </div>
-
     </header>
+
     <main >
 
     </main>

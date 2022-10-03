@@ -11,12 +11,14 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Michroma&family=Sen:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./asset/css/style.css"">
+    
 </head>
 <body>
     
     <header class="header" id="header">
-        <div class="header__container">
             <nav class="nav">
+
+                <!---- MENU DE NAVEGACION MOBILE ---->
 
                 <ul class="nav__menu nav__menu--mobile">
                     <li class="nav__item">
@@ -26,73 +28,99 @@
                         </div>
                     </li>
                     <li class="nav__item">
-                        <a href="index.html" class="nav__link nav__link--accesomovil"></a>
+                        <a href="./index.html" class="nav__link--accesomovil"></a>
                     </li>
                     <li class="nav__item">
-                        <a href="" class="nav__link nav__link--bagshop"></a>
+                        <a href="" class="nav__link  nav__link--bagshop"></a>
                     </li>
                     
                 </ul>
 
-                <ul class="nav__menu nav__menu--desktop">
+                <!---- MENU DE NAVEGACION DE ESCRITORIO ---->
+
+                <ul class="nav__menu nav__menu--desktop" 
+                    style="display: none">
 
                     <li class="nav__item nav__item--hidden">
-                        <a href="index.html" class="nav__link nav__link--accesomovil"></a>
+                        <a href="./index.html" class="nav__link nav__link--accesomovil"></a>
                     </li>
 
                     <li class="nav__item">
-                        <a href="productos/fundas.html" class="nav__link">Fundas</a>
+                        <a href="./productos/fundas.html" class="nav__link">Fundas</a>
                     </li>
                     <li class="nav__item">
-                        <a href="productos/auriculares.html" class="nav__link nav__link">Auriculares</a>
+                        <a href="./productos/auriculares.html" class="nav__link nav__link">Auriculares</a>
                     </li>
                     <li class="nav__item">
-                        <a href="productos/comecable.html" class="nav__link nav__link">Comecable</a>
+                        <a href="./productos/comecable.html" class="nav__link">Comecable</a>
                     </li>
                     <li class="nav__item">
-                        <a href="productos/popsockets.html" class="nav__link nav__link">Popsockets</a>
+                        <a href="./productos/popsockets.html" class="nav__link">Popsockets</a>
                     </li>
                     <li class="nav__item">
-                        <a href="productos/templado.html" class="nav__link nav__link">Templados</a>
+                        <a href="./productos/templado.html" class="nav__link">Templados</a>
                     </li>
                     <li class="nav__item">
-                        <a href="productos/arosdeluz.html" class="nav__link nav__link">Aros de luz</a>
+                        <a href="./productos/arosdeluz.html" class="nav__link">Aros de luz</a>
                     </li>
                     <li class="nav__item">
-                        <a href="" class="nav__link nav__link--search"></a>
+                        <a href="#" class="nav__link nav__link--search"></a>
                     </li>
-                    <li class="nav__item nav__item--hidden">
+                    <li class="nav__item">
                         <a href="" class="nav__link nav__link--bagshop"></a>
                     </li>
                 </ul>
             </nav>
-        
-            <div class="header__search" style="display: none;">
-                <div class="header__searchlink"></div>
-                <div class="header__searchbar">
-                    <form action="" class="header__searchform"><input type="text" placeholder="Busca tu estilo" class="header__searchinput"></form>
-                </div>
-                <div class="header__link-close"></div>
+            <!-- Final del menu de navegacion-->
 
-                <div class="header__quick-link">
-                    <h2>Enlaces Rápidos</h2>
-                    <ul>
-                        <li>
-                            <a href="productos/fundas.html">Fundas</a></li>
-                        <li>
-                            <a href="productos/auriculares.html">Auriculares</a></li>
-                        <li>
-                            <a href="contacto/contacto.html">Contacto</a></li>
+            <!-- BARRA DE BUSQUEDA -->
+
+            <div class="search search--hidden">
+                <div class="nav__link--search"></div>
+                <div class="search__bar">
+                    <form action="" class="search__form"><input type="text" placeholder="Busca tu estilo" class="search__input"></form>
+                </div>
+                <div class="search__link-close"></div>
+
+                <div class="search__quick-link">
+                    <h2 class="quick__h2">Enlaces Rápidos</h2>
+                    <ul class="quick__ul">
+                        <li class="quick__li">
+                            <a href="./productos/fundas.html" class="quick__a">Fundas</a></li>
+                        <li class="quick__li">
+                            <a href="./productos/auriculares.html" class="quick__a">Auriculares</a></li>
+                        <li class="quick__li">
+                            <a href="./contacto/contacto.html"class="quick__a">Contacto</a></li>
                     </ul>
                 </div>
             </div>
-        </div>
+
+            <div class="search-mobile" style="display: none;">
+                <div class="search-mobile__link"></div>
+                <div class="search-mobile__bar">
+                    <form action="" class="search-mobile__form"><input type="text" placeholder="Busca tu estilo" class="search-mobile__input"></form>
+                </div>
+                <div class="search-mobile__cancel-btn"></div>
+
+                <div class="search-mobile__quick-link">
+                    <h2>Enlaces Rápidos</h2>
+                    <ul>
+                        <li>
+                            <a href="./productos/fundas.html">Fundas</a></li>
+                        <li>
+                            <a href="./productos/auriculares.html">Auriculares</a></li>
+                        <li>
+                            <a href="./contacto/contacto.html">Contacto</a></li>
+                    </ul>
+                </div>
+            </div>
+    <div class="overlay">
+    </div>
     </header>
     
+    
     <main class="main">
-        <div class="progress">
-            <span class="progress-bar" style="width: 100%; height: 0.5rem"></span>
-        </div>
+        
         <section class="hero hero--fundasestilo">
             <div class="hero__container">
                 <div class="hero__title">
@@ -105,7 +133,9 @@
                 </div>
             </div>
         </section>
-
+        <div class="progress">
+            <span class="progress-bar" style="width: 100%"></span>
+        </div>
         <section class="section section--fundasrigidas">
             <div class="main__card-img"><img src="" alt="" class="section__image"></div>
             <article></article>
@@ -174,7 +204,7 @@
 
 
     </footer>
-
+    <script src="main.js"></script>
 </body>
 </html>
 
