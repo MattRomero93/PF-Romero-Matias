@@ -16,11 +16,44 @@
 <body>
     
     <header class="header" id="header">
-            <nav class="nav">
+        <nav class="nav">
+            <a href="./index.html">
+                <img src="./asset/img/icon/logo-accesomovil.svg" alt="AccessoMovil" class="logo">
+            </a>
+            <ul class="nav__menu">
+                <li class="nav__item">
+                    <a href="" class="nav-link">Fundas</a></li>
+                <li class="nav__item">
+                    <a href="" class="nav-link">Auriculares</a></li>
+                <li class="nav__item">
+                    <a href="" class="nav-link">Popsockets</a></li>
+                <li class="nav__item">
+                    <a href="" class="nav-link">Comecables</a></li>
+                <li class="nav__item">
+                    <a href="" class="nav-link">Templados</a></li>
+                <li class="nav__item">
+                    <a href="" class="nav-link">Aros de luz</a></li>
+                <li class="nav__item">
+                    <a href="" class="nav-link"><img class="logo-search" src="./asset/img/icon/search.svg" alt="search"></a>
+                    </li>
+                <li class="nav__item>
+                    <a href="" class="nav-link"><img class="logo-bag" src="./asset/img/icon/bag.svg" alt="shopping bag"></a>
+                    </li>
+            </ul>
+            
+            
+        <div class="mobile">
+            <span class="mobile__line"></span>
+            <span class="mobile__line"></span>
+            <span class="mobile__line"></span>
+        </div>
+    </nav>        
+        
+        <nav class="nav">
 
                 <!---- MENU DE NAVEGACION MOBILE ---->
 
-                <ul class="nav__menu nav__menu--mobile">
+                <ul class="nav__menu nav__menu--mobile" style="display: none;">
                     <li class="nav__item">
                         <div class="mobile__menu">
                             <span class="line line--top"></span>
@@ -39,8 +72,7 @@
 
                 <!---- MENU DE NAVEGACION DE ESCRITORIO ---->
 
-                <ul class="nav__menu nav__menu--desktop" 
-                    style="display: none">
+                <ul class="nav__menu nav__menu--desktop"style="display: none;">
 
                     <li class="nav__item nav__item--hidden">
                         <a href="./index.html" class="nav__link nav__link--accesomovil"></a>
@@ -76,7 +108,7 @@
 
             <!-- BARRA DE BUSQUEDA -->
 
-            <div class="search search--hidden">
+            <div class="search search--hidden" style="display: none">
                 <div class="nav__link--search"></div>
                 <div class="search__bar">
                     <form action="" class="search__form"><input type="text" placeholder="Busca tu estilo" class="search__input"></form>
@@ -122,6 +154,22 @@
     
     <main class="main">
         
+        <section class="slider">
+            <div class="slider__slider">
+                <div class="slider__section">
+                    <img src="/asset/img/comecable.jpg" alt="" class="slider__img">
+                </div>
+                <div class="slider__section">
+                    <img src="./asset/img/auriculares.jpg" alt="" class="slider__img">
+                </div>
+                <div class="slider__section">
+                    <img src="/asset/img/compraonline.jpg" alt="" class="slider__img">
+                </div>
+            </div>
+            <div class="slider__btn--prev"><i class="fa-solid fa-circle-left"></i></div>
+            <div class="slider__btn--next"><i class="fa-solid fa-circle-right"></i></div>
+        </section>
+
         <section class="hero hero--fundasestilo">
             <div class="hero__container">
                 <div class="hero__title">
@@ -177,30 +225,14 @@
     </main>
 
     <footer class="footer">
-        <h3 class="footer__h3">Logo</h3>
-        <h4 class="footer__text">Descubrir</h4>
-        <ul class="footer__ul">
-            <li class="footer__li"><a href="" class="footer__a">Item Footer 1</a></li>
-            <li class="footer__li"><a href="" class="footer__a">Item Footer 2</a></li>
-            <li class="footer__li"><a href="" class="footer__a">Item Footer 3</a></li>
-            <li class="footer__li"><a href="" class="footer__a">Item Footer 4</a></li>
-            <li class="footer__li"><a href="" class="footer__a">Item Footer 5</a></li>
-        </ul>
-        <ul class="footer__ul">
-            <li class="footer__li"><a href="" class="footer__a">Item Footer 1</a></li>
-            <li class="footer__li"><a href="" class="footer__a">Item Footer 2</a></li>
-            <li class="footer__li"><a href="" class="footer__a">Item Footer 3</a></li>
-            <li class="footer__li"><a href="" class="footer__a">Item Footer 4</a></li>
-            <li class="footer__li"><a href="" class="footer__a">Item Footer 5</a></li>
-        </ul>
-        <ul class="footer__ul">
-            <li class="footer__li"><a href="" class="footer__a">Item Footer 1</a></li>
-            <li class="footer__li"><a href="" class="footer__a">Item Footer 2</a></li>
-            <li class="footer__li"><a href="" class="footer__a">Item Footer 3</a></li>
-            <li class="footer__li"><a href="" class="footer__a">Item Footer 4</a></li>
-            <li class="footer__li"><a href="" class="footer__a">Item Footer 5</a></li>
-        </ul>
-        <div class="footer__text"></div>
+        <div>
+            <h3 class="links__utiles">
+
+            </h3>
+            <h3 class="links__utiles"></h3>
+            <h3 class="links__utiles"></h3>
+        </div>
+    </footer>
 
 
 
