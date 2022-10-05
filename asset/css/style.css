@@ -75,6 +75,19 @@ header nav ul li a:hover {
   color: hsl(215deg, 100%, 70%);
 }
 
+.logo {
+  width: 15rem;
+  margin-right: 6rem;
+}
+.logo--bag {
+  margin: 0 auto;
+  width: 1.4rem;
+}
+.logo--search {
+  margin: 0 auto;
+  width: 1.4rem;
+}
+
 .toggle-menu {
   display: none;
   position: absolute;
