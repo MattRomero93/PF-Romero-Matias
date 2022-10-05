@@ -1,9 +1,10 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=,, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Acceso Movil - Inicio</title>
     <link rel="icon" href="./asset/img/icon/favicon.ico" type="ico"/>
     <script src="https://kit.fontawesome.com/5ad47a4490.js" crossorigin="anonymous"></script>
@@ -14,141 +15,36 @@
     
 </head>
 <body>
-    
-    <header class="header" id="header">
+    <header>
         <nav class="nav">
             <a href="./index.html">
                 <img src="./asset/img/icon/logo-accesomovil.svg" alt="AccessoMovil" class="logo">
             </a>
-            <ul class="nav__menu">
-                <li class="nav__item">
-                    <a href="" class="nav-link">Fundas</a></li>
-                <li class="nav__item">
-                    <a href="" class="nav-link">Auriculares</a></li>
-                <li class="nav__item">
-                    <a href="" class="nav-link">Popsockets</a></li>
-                <li class="nav__item">
-                    <a href="" class="nav-link">Comecables</a></li>
-                <li class="nav__item">
-                    <a href="" class="nav-link">Templados</a></li>
-                <li class="nav__item">
-                    <a href="" class="nav-link">Aros de luz</a></li>
-                <li class="nav__item">
-                    <a href="" class="nav-link"><img class="logo-search" src="./asset/img/icon/search.svg" alt="search"></a>
-                    </li>
-                <li class="nav__item>
-                    <a href="" class="nav-link"><img class="logo-bag" src="./asset/img/icon/bag.svg" alt="shopping bag"></a>
-                    </li>
+            <ul id="main-menu" class="main-menu">
+                <li class="main-menu__item">
+                    <a href="" class="main-menu__link">Fundas</a></li>
+                <li class="main-menu__item">
+                    <a href="" class="main-menu__link">Auriculares</a></li>
+                <li class="main-menu__item">
+                    <a href="" class="main-menu__link">Popsockets</a></li>
+                <li class="main-menu__item">
+                    <a href="" class="main-menu__link">Comecables</a></li>
+                <li class="main-menu__item">
+                    <a href="" class="main-menu__link">Templados</a></li>
+                <li class="main-menu__item">
+                    <a href="" class="main-menu__link">Aros de luz</a></li>
+                <li class="main-menu__item">
+                    <a href="" class="main-menu__link"><img class="logo logo--search" src="./asset/img/icon/search.svg" alt="search"></a></li>    
+                <li class="main-menu__item">
+                    <a href="" class="main-menu__link"><img class="logo logo--bag" src="./asset/img/icon/bag.svg" alt="shopping bag"></a><li>                 
             </ul>
-            
-            
-        <div class="mobile">
-            <span class="mobile__line"></span>
-            <span class="mobile__line"></span>
-            <span class="mobile__line"></span>
-        </div>
+            <div class="toggle-menu" id="toggle-menu">
+            <span class="toggle-menu__line"></span>
+            <span class="toggle-menu__line"></span>
+            <span class="toggle-menu__line"></span>
+            </div>
     </nav>        
-        
-        <nav class="nav">
 
-                <!---- MENU DE NAVEGACION MOBILE ---->
-
-                <ul class="nav__menu nav__menu--mobile" style="display: none;">
-                    <li class="nav__item">
-                        <div class="mobile__menu">
-                            <span class="line line--top"></span>
-                            <span class="line line--mid"></span>
-                            <span class="line line--bottom"></span>
-                        </div>
-                    </li>
-                    <li class="nav__item">
-                        <a href="./index.html" class="nav__link--accesomovil"></a>
-                    </li>
-                    <li class="nav__item">
-                        <a href="" class="nav__link  nav__link--bagshop"></a>
-                    </li>
-                    
-                </ul>
-
-                <!---- MENU DE NAVEGACION DE ESCRITORIO ---->
-
-                <ul class="nav__menu nav__menu--desktop"style="display: none;">
-
-                    <li class="nav__item nav__item--hidden">
-                        <a href="./index.html" class="nav__link nav__link--accesomovil"></a>
-                    </li>
-
-                    <li class="nav__item">
-                        <a href="./productos/fundas.html" class="nav__link">Fundas</a>
-                    </li>
-                    <li class="nav__item">
-                        <a href="./productos/auriculares.html" class="nav__link nav__link">Auriculares</a>
-                    </li>
-                    <li class="nav__item">
-                        <a href="./productos/comecable.html" class="nav__link">Comecable</a>
-                    </li>
-                    <li class="nav__item">
-                        <a href="./productos/popsockets.html" class="nav__link">Popsockets</a>
-                    </li>
-                    <li class="nav__item">
-                        <a href="./productos/templado.html" class="nav__link">Templados</a>
-                    </li>
-                    <li class="nav__item">
-                        <a href="./productos/arosdeluz.html" class="nav__link">Aros de luz</a>
-                    </li>
-                    <li class="nav__item">
-                        <a href="#" class="nav__link nav__link--search"></a>
-                    </li>
-                    <li class="nav__item">
-                        <a href="" class="nav__link nav__link--bagshop"></a>
-                    </li>
-                </ul>
-            </nav>
-            <!-- Final del menu de navegacion-->
-
-            <!-- BARRA DE BUSQUEDA -->
-
-            <div class="search search--hidden" style="display: none">
-                <div class="nav__link--search"></div>
-                <div class="search__bar">
-                    <form action="" class="search__form"><input type="text" placeholder="Busca tu estilo" class="search__input"></form>
-                </div>
-                <div class="search__link-close"></div>
-
-                <div class="search__quick-link">
-                    <h2 class="quick__h2">Enlaces Rápidos</h2>
-                    <ul class="quick__ul">
-                        <li class="quick__li">
-                            <a href="./productos/fundas.html" class="quick__a">Fundas</a></li>
-                        <li class="quick__li">
-                            <a href="./productos/auriculares.html" class="quick__a">Auriculares</a></li>
-                        <li class="quick__li">
-                            <a href="./contacto/contacto.html"class="quick__a">Contacto</a></li>
-                    </ul>
-                </div>
-            </div>
-
-            <div class="search-mobile" style="display: none;">
-                <div class="search-mobile__link"></div>
-                <div class="search-mobile__bar">
-                    <form action="" class="search-mobile__form"><input type="text" placeholder="Busca tu estilo" class="search-mobile__input"></form>
-                </div>
-                <div class="search-mobile__cancel-btn"></div>
-
-                <div class="search-mobile__quick-link">
-                    <h2>Enlaces Rápidos</h2>
-                    <ul>
-                        <li>
-                            <a href="./productos/fundas.html">Fundas</a></li>
-                        <li>
-                            <a href="./productos/auriculares.html">Auriculares</a></li>
-                        <li>
-                            <a href="./contacto/contacto.html">Contacto</a></li>
-                    </ul>
-                </div>
-            </div>
-    <div class="overlay">
-    </div>
     </header>
     
     
@@ -237,7 +133,7 @@
 
 
     </footer>
-    <script src="main.js"></script>
+    <script src="./asset/js/main.js"></script>
 </body>
 </html>
 
