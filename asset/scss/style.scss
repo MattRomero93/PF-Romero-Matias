@@ -1,15 +1,18 @@
 $primary-color: #fafafa;
 $secondary-color: hsla(0, 0%, 53%, 0.878);
 $terciary-color:hsl(215, 88%, 76%);
-$highlight: hsl(215, 100%, 70%);
-$bg-color: rgba(255, 255, 255, 0.8);
+$black-color: rgba(0,0,0,0.8);
+$highlight: #66a6ff;
+$highlight2:#71abfc;
 $font-title: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 $font-text: 'Sen', sans-serif;
-$box-shadow: 0 2px 10px 0 rgba(0,0,0,0.6);
+$bg-color: rgba(255, 255, 255, 0.9);
+$box-shadow: 1px 2px 5px 1px rgba(0, 0, 0, 0.2);
 
 *,*::after,*::before{
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 ::-webkit-scrollbar{
     width: .8rem;
@@ -26,14 +29,18 @@ html{
     font-size: 10px;
     font-family: $font-title;
 }
+body::selection{
+    background-color: $secondary-color;
+    color: $primary-color;
+}
 a{
     display: block;
     text-decoration: none;
 }
 
 body{
-    background: #000;
     font-family: $font-title;
+    background-color: $bg-color;
 }
 
 header{
@@ -44,13 +51,14 @@ header{
     left: 0%;
     z-index: 1000;
     backdrop-filter: saturate(180%) blur(20px);
+    border-bottom: 0.2px solid rgba(212, 212, 212, 0.575);
+    box-shadow: $box-shadow;
 
     nav{
         width: 80%;
         display: flex;
         justify-content: space-between;
         align-items: center;
-        padding: 0 2.4rem;
         margin: auto;
         height: 6rem;
 
@@ -65,7 +73,8 @@ header{
 
             li{
                 padding-bottom: 0.3rem;
-                font-size: 1.3rem;                cursor: pointer;
+                font-size: 1.3rem;               
+                cursor: pointer;
                 list-style: none;;
                 font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
                 
@@ -81,9 +90,11 @@ header{
     }
 }
 
+
+
 .logo{
     width: 15rem;
-    margin-right: 6rem;
+    margin-right: 4rem;
     &--bag{
         margin: 0 auto;
         width: 1.4rem;
@@ -95,55 +106,140 @@ header{
     
 }
 
-
-
 .toggle-menu{
     display: none;
-    position: absolute;
     top: 1rem;
     right: 1rem;
     cursor: pointer;
     width:4rem;
+
     &__line{
             display: block;
             width: 2.5rem;
             height: 0.3rem;
             margin: 0.5rem auto;
             transition: all 0.3s ease-in-out;
-            background-color: hsl(215deg, 100%, 70%);
+            background-color: $highlight;
             border-radius: 2rem;
             right: 30%;
     }
 }
 
-/*.main-menu{
-    list-style: none;
-    margin-top: 0;
-    margin-bottom: 0;
-    padding-left: 0;
+/*---------------SLIDER--------------*/
+
+.container-slider{
+    padding: 0;
+    width: 80%;
+    max-width: 1200px;
+    position: relative;
+    overflow: hidden;
+    margin: 7rem auto;
+}
+
+.slider{
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    transform: translateY(-100%);
-    transition: transform .3s;
+    width: 500%;
+    height: 400px;
+    margin-left: -100%;
+
+    &__section{
+        width: 50%;
+    }
+
+    &__img{
+        margin: 0 auto;
+        display: block;
+        height: 100%;
+        max-width: 100%;
+    }
+
+    &__btn{
+        font-size: 4rem;
+        position: absolute;
+        transform: translateY(-50%);
+        top: 50%;
+        cursor: pointer;
+        color: $highlight2;
+        opacity: .5;
+        transition: opacity .3s ease-in-out;
+
+        &:hover{
+            opacity: 1;
+            color: $highlight2;
+        }
+        
+        &--left{
+            left: 2%;
+        }
+
+        &--right{
+            right: 2%;
+            
+        }
+    }
+}
+
+.tuestilo{
+    margin: 4rem 0;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    font-size: 2.5rem;
+    background: linear-gradient(to right, #2980B9, #b0d4fa);
+    background-clip: text;
+    color: transparent;
+
+}
+
+.tuestilo h1::before{
+    content: "";
+    display: block;
+    position: absolute;
+    text-align: center;
+    margin: auto;
+    bottom: 12%;
+    left: 0%;
+    min-width: 25%;
+    height: 2px;
+    background-color:rgba(170, 169, 169, 0.5);
+
+}
+.tuestilo h1::after{
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: 12%;
+    min-width: 25%;
+    height: 2px;
+    right: 0%;
+    background-color: rgba(170, 169, 169, 0.5);
+}
+
+
+
+
+
+.footer{
+    .footer__menu{
+        width: 100%;
+        height: 20rem;
+        background-color: beige;
+        gap: 1rem;
     
-    &__item{
-        padding: 1rem;
-        text-decoration: none;
-        background-color: #000;
-        height: 7rem;
+        &--siguenos{
+            background-color: aquamarine;
+            grid-area: siguenos;
+        }
+        &--links-utiles{
+            background-color: orange;
+            grid-area: links-utiles;
+        }
+        &--legal{
+            background-color: greenyellow;
+            grid-area: legal;
+        }
     }
-
-    &__link{
-        color: #fff;
-        text-transform: uppercase;
-        text-decoration: none;
-        font-size: 1.6rem;
-    }
-}*/
-
-
-
+}
 
 
 
@@ -166,7 +262,7 @@ header{
         left: 0;
     }
     .nav{
-        width: 90%;
+        width: 80%;
         margin: 0 auto;
     }
     
@@ -177,11 +273,15 @@ header{
         top: 6rem;
         gap: 0;
         flex-direction: column;
-        background-color: $secondary-color;
+        background-color: #fff;
+        
+        border-bottom: 0.2px solid rgba(212, 212, 212, 0.575);
         width: 100%;
-        height: 50vh;
+        height: 600%;
         text-align: center;
         transition: .3s;
+        z-index: 1000;
+        backdrop-filter: saturate(180%) blur(2rem);
         
         &__item{
             line-height: 3rem;
@@ -191,7 +291,8 @@ header{
             height: 3rem;
             
             &:hover{
-                background-color: $terciary-color;
+                background-color: #fafafa;
+                color: bisque;
             }
             &:hover::before{
                 display: none;
@@ -199,7 +300,9 @@ header{
         }
         &__link{
             font-size: 1.5rem;
-            color: #fff;
+            color: $secondary-color;
         }
     }
+
+
 }
