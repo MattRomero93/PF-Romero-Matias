@@ -1,52 +1,61 @@
 $primary-color: #fafafa;
-$secondary-color: hsl(0, 0%, 50%);
-$terciary-color:#8cb9f8;
+$secondary-color: hsl(0, 0%, 33%);
+$terciary-color: #8cb9f8;
 $four-color: #b0d4fa;
-$black-color: rgba(0,0,0,0.8);
+$black-color: rgba(0, 0, 0, 0.8);
 $highlight: #66a6ff;
-$highlight2:#71abfc;
+$highlight2: #71abfc;
 $bg-color: rgba(255, 255, 255, 0.9);
 $font-title: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 $font-text: 'Sen', sans-serif;
 $box-shadow: 1px 1px 20px 2px rgba(100, 100, 100, 0.1);
+$padding-container: 5rem 0;
 
-*,*::after,*::before{
+
+*,
+*::after,
+*::before {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-::-webkit-scrollbar{
+
+::-webkit-scrollbar {
     width: .8rem;
 }
-::-webkit-scrollbar-track{
+
+::-webkit-scrollbar-track {
     background-color: #fff;
 }
-::-webkit-scrollbar-thumb{
+
+::-webkit-scrollbar-thumb {
     background: $highlight;
     border-radius: 5px;
 }
-html{
+
+html {
     scroll-behavior: smooth;
     font-size: 10px;
     font-family: $font-title;
 }
-body::selection{
+
+body::selection {
     background-color: $secondary-color;
     color: $primary-color;
 }
-a{
-    display: block;
+
+a {
     text-decoration: none;
 }
 
-body{
+body {
     font-family: $font-title;
     background-color: $bg-color;
 }
 
 /*---------------ENCABEZADO--------------*/
 
-header{
+header {
     width: 100%;
     background: $bg-color;
     position: fixed;
@@ -58,159 +67,165 @@ header{
     box-shadow: $box-shadow;
 
 
-    nav{
-        width: 80%;
+    nav {
+        width: 90%;
         display: flex;
         justify-content: space-between;
         align-items: center;
         margin: auto;
         height: 6rem;
 
-        ul{
-            height: 100%;
-            width: 100%;
-            margin: auto;
+        ul {
+            width: 70%;
             display: flex;
             justify-content: space-between;
             align-items: center;
 
-            li{
+            li {
                 height: 100%;
-                font-size: 1.4rem;               
+                font-size: 1.4rem;
                 cursor: pointer;
                 list-style: none;
                 font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-                
-                    a{
-                        display: flex;
-                        align-items: center;
-                        color: $secondary-color;
-                        transition: 0.6s ease;
-                        position: relative;
-                        height: 6rem;
+                padding: 0;
 
-                        &::before{
-                            content: "";
-                            position: absolute;
-                            display: block;
-                            right: 0;
-                            bottom: 0rem;
-                            width: 100%;
-                            height: 0.2rem;
-                            transform: scaleX(0);
-                            transition: transform .4s ease-in-out;
-                            background-color: $highlight;
-                        }
-                        &:hover{
-                            opacity: 0.5;
-                        }
+                a {
+                    display: flex;
+                    align-items: center;
+                    color: $secondary-color;
+                    transition: 0.6s ease;
+                    position: relative;
+                    height: 6rem;
+                    opacity: .6;
+
+                    &::before {
+                        content: "";
+                        position: absolute;
+                        display: block;
+                        right: 0;
+                        bottom: 0rem;
+                        width: 100%;
+                        height: 0.2rem;
+                        transform: scale(0);
+                        transition: transform .4s ease-in-out;
+                        background-color: $highlight;
                     }
+
+                    &:hover {
+                        opacity: 1;
+                    }
+                }
             }
         }
     }
 }
 
-.main-menu__link:hover::before{
-    transform: scaleX(1);
+.main-menu__link:hover::before {
+    transform: scale(1);
 }
 
 /*---------------LOGO ACCESO MOVIL--------------*/
 
-.logo{
-    width: 15rem;
+.logo {
+    line-height: 0;
+    width: 14rem;
     height: 3.1rem;
     margin-right: 4rem;
     align-items: center;
-    &--bag{
+
+    &--bag {
         margin: 0 auto;
         width: 1.5rem;
 
-        &:hover::before{
+        &:hover::before {
             display: none;
         }
     }
-    &--search{
+
+    &--search {
         margin: 0 auto;
         width: 1.5rem;
     }
-    
+
 }
-.hidden{
-    &:hover::before{
+
+.hidden {
+    &:hover::before {
         display: none;
     }
 }
 
 /*---------------TOGGLE--------------*/
-.toggle-menu{
+.toggle-menu {
     display: none;
     top: 1rem;
     right: 1rem;
     cursor: pointer;
-    width:4rem;
+    width: 4rem;
 
-    &__line{
-            display: block;
-            width: 2.5rem;
-            height: 0.3rem;
-            margin: 0.5rem auto;
-            transition: all 0.3s ease-in-out;
-            background-color: $highlight;
-            border-radius: 2rem;
-            right: 30%;
+    &__line {
+        display: block;
+        width: 2.5rem;
+        height: 0.3rem;
+        margin: 0.5rem auto;
+        transition: all 0.3s ease-in-out;
+        background-color: $highlight;
+        border-radius: 2rem;
+        right: 30%;
     }
 }
 
 /*---------------SLIDER--------------*/
 
-.container-slider{
+.container-slider {
     padding: 0;
     width: 80%;
-    max-width: 1200px;
+    max-width: 1100px;
     position: relative;
     overflow: hidden;
-    margin: 7rem auto;
+    margin-top: 7rem;
+    margin: 7rem auto 0;
 }
 
-.slider{
+.slider {
     display: flex;
     width: 500%;
     height: 400px;
     margin-left: -100%;
 
-    &__section{
-        width: 50%;
+    &__section {
+        width: 100%;
     }
 
-    &__img{
+    &__img {
         margin: 0 auto;
         display: block;
         height: 100%;
         max-width: 100%;
     }
 
-    &__btn{
+    &__btn {
         font-size: 4rem;
         position: absolute;
         transform: translateY(-50%);
-        top: 50%;
+        top: 40%;
         cursor: pointer;
         color: $highlight2;
         opacity: .5;
         transition: opacity .4s ease-in-out;
 
-        &:hover{
+        &:hover {
             opacity: 1;
             color: $highlight2;
         }
-        
-        &--left{
+
+        &--left {
             left: 2%;
         }
 
-        &--right{
+        &--right {
             right: 2%;
-            
+
         }
     }
 }
@@ -218,61 +233,212 @@ header{
 
 /*---------------TUESTILO--------------*/
 
-.tuestilo{
-    margin: 4rem 0;
+.tuestilo {
+    margin: 2rem 0;
     display: flex;
     justify-content: center;
     text-align: center;
-    font-size: 2.5rem;
+    font-size: 3.5rem;
     background: linear-gradient(to right, #2980B9, #b0d4fa);
     background-clip: text;
     color: transparent;
 }
 
-.tuestilo h2::before{
+.tuestilo h2::before {
     content: "";
     display: block;
     position: absolute;
     text-align: center;
     margin: auto;
-    bottom: 12%;
+    bottom: 10%;
     left: 0%;
     min-width: 25%;
     height: 2px;
-    background-color:rgba(170, 169, 169, 0.5);
-
+    background-color: rgba(170, 169, 169, 0.5);
 }
-.tuestilo h2::after{
+
+.tuestilo h2::after {
     content: "";
     display: block;
     position: absolute;
-    bottom: 12%;
+    bottom: 10%;
     min-width: 25%;
     height: 2px;
     right: 0%;
     background-color: rgba(170, 169, 169, 0.5);
 }
 
+.tuestilo h5 {
+    color: #256D85;
+}
 
+.margin7 {
+    margin-top: 7rem;
+    text-transform: uppercase;
+    text-align: left;
+}
+
+/*----------PAGINA AURICULARES CONTENIDO----------*/
+
+
+.product-item {
+    width: 100%;
+    height: 350px;
+    border-radius: 2rem;
+    background-color: #f6faff;
+    overflow: hidden;
+    margin-bottom: 2rem;
+
+    &__product1 {
+        height: 100%;
+        height: 400px;
+    }
+
+    &__texts {
+        height: 100%;
+        width: 50%;
+        margin-top: -35rem;
+        padding: 4rem 7rem;
+    }
+
+    &__picture {
+        width: 100%;
+        height: 350px;
+        background: url(../img/behar-zenuni-797461-unsplash-scaled.jpg)no-repeat;
+        background-size: 550px;
+        background-position: right;
+    }
+}
+
+.product-item2 {
+    width: 100%;
+    height: 350px;
+    border-radius: 2rem;
+    background-color: #000000c7;
+    overflow: hidden;
+    margin-bottom: 2rem;
+
+    & {
+        height: 400px;
+    }
+
+    .subtitle {
+        color: $primary-color;
+    }
+
+    &__paragraph {
+        color: $primary-color;
+    }
+
+    &__product1 {
+        height: 100%;
+        height: 400px;
+    }
+
+    &__texts {
+        text-align: right;
+        color: $primary-color;
+        height: 100%;
+        width: 100%;
+        margin-top: -40rem;
+        padding: 4rem 7rem;
+    }
+
+    &__picture {
+        width: 100%;
+        height: 450px;
+        background: url(../img/max-simonov-Zxxxrc4a7uY-unsplash.jpg)no-repeat;
+        background-size: 850px;
+    }
+}
+
+.product-auri {
+    width: 50%;
+    height: 300px;
+    background-color: #b0d4fa;
+    border-radius: 2rem;
+    overflow: hidden;
+    margin: 3rem 0;
+}
+
+
+.subtitle {
+    font-size: 3.5rem;
+    margin-bottom: 0rem;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    overflow: hidden;
+    padding: $padding-container;
+    margin-bottom: 0rem;
+}
+
+.cta {
+    position: relative;
+    display: inline-block;
+    background-color: $highlight;
+    border: 2px solid $highlight;
+    justify-self: center;
+    color: #fff;
+    text-decoration: none;
+    padding: 13px 30px;
+    font-size: 1.8rem;
+    transition: color 0.5s, background 0.5s;
+
+    &:hover {
+        color: $highlight;
+        background-color: transparent;
+
+    }
+
+    &--dark {
+        color: $highlight;
+    }
+}
+
+.cta.round {
+    border-radius: 30px;
+}
+
+.listado {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 6px;
+
+    img {
+        max-width: 100%;
+    }
+
+    div {
+        border: solid 1px #256D85;
+        border-radius: 30px;
+        overflow: hidden;
+    }
+}
 
 /*---------------FOOTER-------------*/
 
-.footer{
-    &__menu{
+.footer {
+    &__menu {
         width: 100%;
         height: 20rem;
         background-color: beige;
         gap: 1rem;
-    
-        &--siguenos{
+
+        &--siguenos {
             background-color: aquamarine;
             grid-area: siguenos;
         }
-        &--links-utiles{
+
+        &--links-utiles {
             background-color: orange;
             grid-area: links-utiles;
         }
-        &--legal{
+
+        &--legal {
             background-color: greenyellow;
             grid-area: legal;
         }
@@ -280,32 +446,36 @@ header{
 }
 
 
-
 /*---------------MEDIAQUERYS--------------*/
 
-@media screen and (max-width:850px){
-    .toggle-menu{
+@media screen and (max-width:900px) {
+    .toggle-menu {
         display: block;
     }
-    .toggle-menu.active span:nth-child(2){
+
+    .toggle-menu.active span:nth-child(2) {
         opacity: 0;
     }
-    .toggle-menu.active span:nth-child(1){
+
+    .toggle-menu.active span:nth-child(1) {
         transform: translateY(0.8rem) rotate(135deg);
     }
-    .toggle-menu.active span:nth-child(3){
+
+    .toggle-menu.active span:nth-child(3) {
         transform: translateY(-0.8rem) rotate(-135deg);
     }
-    .main-menu.active{
+
+    .main-menu.active {
         left: 0;
     }
-    .nav{
-        width: 80%;
+
+    .nav {
+        width: 90%;
         margin: 0 auto;
     }
 
 
-    .main-menu{
+    .main-menu {
         position: fixed;
         left: -120%;
         top: 6.1rem;
@@ -318,21 +488,23 @@ header{
         text-align: left;
         transition: .3s;
         gap: 0;
-        
-        &__item{
+
+        &__item {
             font-size: 1.8rem;
             justify-content: left;
             width: 100%;
             line-height: 4rem;
-            
+
             border-bottom: 0.2px solid rgba(212, 212, 212, 0.575);
-            &:hover{
+
+            &:hover {
                 font-size: 1.8rem;
                 background-color: $four-color;
             }
 
         }
-        &__link{
+
+        &__link {
             display: block;
             width: 100%;
             height: 4rem;
@@ -343,30 +515,63 @@ header{
 
 
 
-.main-menu__link{
+    .main-menu__link {
 
-    &:hover{
-        opacity: 0.7;
+        &:hover {
+            opacity: 0.7;
 
+        }
+
+        &:hover::before {
+            display: none;
+        }
     }
-    &:hover::before{
-        display: none;
-    }
-}
 
-    .tuestilo h2::before{
+    .tuestilo h2::before {
         bottom: 12%;
         left: 0%;
         min-width: 15%;
         height: 2px;
-        background-color:rgba(170, 169, 169, 0.5);
-    
+        background-color: rgba(170, 169, 169, 0.5);
+
     }
-    .tuestilo h2::after{
+
+    .tuestilo h2::after {
         bottom: 12%;
         min-width: 15%;
         height: 2px;
         right: -3%;
         background-color: rgba(170, 169, 169, 0.5);
     }
+
+
+    .product-item {
+        width: 100%;
+        height: 350px;
+        border-radius: 2rem;
+        background-color: #f6faff;
+        overflow: hidden;
+
+        &__product1 {
+            height: 100%;
+        }
+
+        &__texts {
+            background-color: #fafbfc3b;
+            color: $primary-color;
+            height: 80%;
+            width: 100%;
+            margin-top: -32rem;
+            padding: 4rem 7rem;
+        }
+
+        &__picture {
+
+            background: url(../img/behar-zenuni-797461-unsplash-scaled.jpg)no-repeat;
+            background-size: 800px 700px;
+
+        }
+    }
+
+
 }
