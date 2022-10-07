@@ -15,7 +15,7 @@
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #66a6ff;
+  background: hsl(215deg, 100%, 70%);
   border-radius: 5px;
 }
 
@@ -27,12 +27,12 @@ html {
 
 body::-moz-selection {
   background-color: hsl(0deg, 0%, 33%);
-  color: #fafafa;
+  color: hsl(0deg, 0%, 98%);
 }
 
 body::selection {
   background-color: hsl(0deg, 0%, 33%);
-  color: #fafafa;
+  color: hsl(0deg, 0%, 98%);
 }
 
 a {
@@ -41,13 +41,13 @@ a {
 
 body {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  background-color: rgba(255, 255, 255, 0.9);
+  background-color: hsla(0deg, 0%, 100%, 0.9);
 }
 
 /*---------------ENCABEZADO--------------*/
 header {
   width: 100%;
-  background: rgba(255, 255, 255, 0.9);
+  background: hsla(0deg, 0%, 100%, 0.9);
   position: fixed;
   top: 0%;
   left: 0%;
@@ -98,7 +98,7 @@ header nav ul li a::before {
   height: 0.2rem;
   transform: scale(0);
   transition: transform 0.4s ease-in-out;
-  background-color: #66a6ff;
+  background-color: hsl(215deg, 100%, 70%);
 }
 header nav ul li a:hover {
   opacity: 1;
@@ -146,7 +146,7 @@ header nav ul li a:hover {
   height: 0.3rem;
   margin: 0.5rem auto;
   transition: all 0.3s ease-in-out;
-  background-color: #66a6ff;
+  background-color: hsl(215deg, 100%, 70%);
   border-radius: 2rem;
   right: 30%;
 }
@@ -183,13 +183,13 @@ header nav ul li a:hover {
   transform: translateY(-50%);
   top: 40%;
   cursor: pointer;
-  color: #71abfc;
+  color: hsl(215deg, 96%, 72%);
   opacity: 0.5;
   transition: opacity 0.4s ease-in-out;
 }
 .slider__btn:hover {
   opacity: 1;
-  color: #71abfc;
+  color: hsl(215deg, 96%, 72%);
 }
 .slider__btn--left {
   left: 2%;
@@ -267,7 +267,7 @@ header nav ul li a:hover {
 .product-item__picture {
   width: 100%;
   height: 350px;
-  background: url(../img/behar-zenuni-797461-unsplash-scaled.jpg) no-repeat;
+  background: url(../img/fundas/behar-zenuni-797461-unsplash-scaled.jpg) no-repeat;
   background-size: 550px;
   background-position: right;
 }
@@ -276,7 +276,7 @@ header nav ul li a:hover {
   width: 100%;
   height: 350px;
   border-radius: 2rem;
-  background-color: rgba(0, 0, 0, 0.7803921569);
+  background-color: hsla(0deg, 0%, 0%, 0.78);
   overflow: hidden;
   margin-bottom: 2rem;
 }
@@ -284,10 +284,10 @@ header nav ul li a:hover {
   height: 400px;
 }
 .product-item2 .subtitle {
-  color: #fafafa;
+  color: hsl(0deg, 0%, 98%);
 }
 .product-item2__paragraph {
-  color: #fafafa;
+  color: hsl(0deg, 0%, 98%);
 }
 .product-item2__product1 {
   height: 100%;
@@ -295,7 +295,7 @@ header nav ul li a:hover {
 }
 .product-item2__texts {
   text-align: right;
-  color: #fafafa;
+  color: hsl(0deg, 0%, 98%);
   height: 100%;
   width: 100%;
   margin-top: -40rem;
@@ -304,17 +304,49 @@ header nav ul li a:hover {
 .product-item2__picture {
   width: 100%;
   height: 450px;
-  background: url(../img/max-simonov-Zxxxrc4a7uY-unsplash.jpg) no-repeat;
+  background: url(../img/fundas/max-simonov-Zxxxrc4a7uY-unsplash.jpg) no-repeat;
   background-size: 850px;
+}
+.product-item2__picture3 {
+  width: 100%;
+  height: 450px;
+  background: url(../img/fundas/max-simonov-Zxxxrc4a7uY-unsplash.jpg) no-repeat;
+  background-size: 1200px;
+}
+
+.auri {
+  display: flex;
+  justify-content: space-around;
 }
 
 .product-auri {
-  width: 50%;
+  display: flex;
+  width: 48%;
   height: 300px;
-  background-color: #b0d4fa;
+  background-color: #dbebfd;
   border-radius: 2rem;
   overflow: hidden;
   margin: 3rem 0;
+}
+.product-auri__texts {
+  height: 100%;
+  width: 100%;
+  padding: 4rem 7rem;
+}
+
+.product-auri2 {
+  display: flex;
+  width: 48%;
+  height: 300px;
+  background-color: #efeff0;
+  border-radius: 2rem;
+  overflow: hidden;
+  margin: 3rem 0;
+}
+.product-auri2__texts {
+  height: 100%;
+  width: 100%;
+  padding: 4rem 7rem;
 }
 
 .subtitle {
@@ -334,8 +366,8 @@ header nav ul li a:hover {
 .cta {
   position: relative;
   display: inline-block;
-  background-color: #66a6ff;
-  border: 2px solid #66a6ff;
+  background-color: hsl(215deg, 100%, 70%);
+  border: 2px solid hsl(215deg, 100%, 70%);
   justify-self: center;
   color: #fff;
   text-decoration: none;
@@ -344,11 +376,11 @@ header nav ul li a:hover {
   transition: color 0.5s, background 0.5s;
 }
 .cta:hover {
-  color: #66a6ff;
+  color: hsl(215deg, 100%, 70%);
   background-color: transparent;
 }
 .cta--dark {
-  color: #66a6ff;
+  color: hsl(215deg, 100%, 70%);
 }
 
 .cta.round {
@@ -370,23 +402,101 @@ header nav ul li a:hover {
 }
 
 /*---------------FOOTER-------------*/
-.footer__menu {
-  width: 100%;
-  height: 20rem;
-  background-color: beige;
-  gap: 1rem;
+.footer {
+  background-color: hsla(0deg, 0%, 0%, 0.78);
 }
-.footer__menu--siguenos {
-  background-color: aquamarine;
-  grid-area: siguenos;
+.footer__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #fff;
+  padding-bottom: 60px;
 }
-.footer__menu--links-utiles {
-  background-color: orange;
-  grid-area: links-utiles;
+.footer__title {
+  font-size: 3.5rem;
+  margin-bottom: 30px;
+  background: linear-gradient(to right, #2980B9, #7fb6f1);
+  -webkit-background-clip: text;
+          background-clip: text;
+  color: transparent;
 }
-.footer__menu--legal {
-  background-color: greenyellow;
-  grid-area: legal;
+.footer__form {
+  top: 50%;
+}
+.footer__newsletter {
+  font-size: 3rem;
+  color: hsl(0deg, 0%, 98%);
+  font-weight: 600;
+}
+.footer__inputs {
+  margin-top: 10px;
+  display: flex;
+  overflow: hidden;
+}
+.footer__input {
+  background-color: #fff;
+  height: 50px;
+  display: block;
+  padding-left: 10px;
+  border-radius: 6px;
+  font-size: 1rem;
+  outline: none;
+  border: none;
+  margin-right: 16px;
+}
+.footer__submit {
+  margin-left: auto;
+  display: inline-block;
+  height: 50px;
+  padding: 0 20px;
+  background-color: #2091F9;
+  border: none;
+  font-size: 1.6rem;
+  color: #fff;
+  border-radius: 30px;
+  cursor: pointer;
+}
+.footer__copy {
+  --padding-container: 30px 0;
+  text-align: center;
+  color: #fff;
+}
+.footer__copyright {
+  font-weight: 300;
+}
+.footer__icons {
+  font-size: 4rem;
+  padding: 0 2rem;
+  margin-bottom: 10px;
+  color: hsla(0deg, 0%, 100%, 0.9);
+}
+.footer__img {
+  width: 40px;
+}
+
+.nav--footer {
+  padding-bottom: 20px;
+  display: grid;
+  gap: 1em;
+  grid-auto-flow: row;
+  height: 100%;
+}
+.nav__link--footer {
+  display: flex;
+  margin: 0;
+  margin-right: 20px;
+  flex-wrap: wrap;
+}
+.nav__links {
+  text-decoration: none;
+  color: hsl(0deg, 0%, 98%);
+  font-size: 1.8rem;
+}
+.nav__linke {
+  gap: 2em;
+}
+.nav__items {
+  list-style: none;
 }
 
 /*---------------MEDIAQUERYS--------------*/
@@ -403,6 +513,32 @@ header nav ul li a:hover {
   .toggle-menu.active span:nth-child(3) {
     transform: translateY(-0.8rem) rotate(-135deg);
   }
+  .subtitle {
+    font-size: 2.5rem;
+    margin-bottom: 0rem;
+  }
+  .cta {
+    position: relative;
+    display: inline-block;
+    background-color: hsl(215deg, 100%, 70%);
+    border: 2px solid hsl(215deg, 100%, 70%);
+    justify-self: center;
+    color: #fff;
+    text-decoration: none;
+    padding: 11px 25px;
+    font-size: 1.5rem;
+    transition: color 0.5s, background 0.5s;
+  }
+  .cta:hover {
+    color: hsl(215deg, 100%, 70%);
+    background-color: transparent;
+  }
+  .cta--dark {
+    color: hsl(215deg, 100%, 70%);
+  }
+  .cta.round {
+    border-radius: 30px;
+  }
   .main-menu.active {
     left: 0;
   }
@@ -415,7 +551,7 @@ header nav ul li a:hover {
     left: -120%;
     top: 6.1rem;
     flex-direction: column;
-    background-color: rgba(255, 255, 255, 0.9);
+    background-color: hsla(0deg, 0%, 100%, 0.9);
     -webkit-backdrop-filter: saturate(180%) blur(20px);
             backdrop-filter: saturate(180%) blur(20px);
     box-shadow: 1px 1px 20px 2px rgba(100, 100, 100, 0.1);
@@ -434,7 +570,7 @@ header nav ul li a:hover {
   }
   .main-menu__item:hover {
     font-size: 1.8rem;
-    background-color: #b0d4fa;
+    background-color: hsl(211deg, 88%, 84%);
   }
   .main-menu__link {
     display: block;
@@ -475,14 +611,54 @@ header nav ul li a:hover {
   }
   .product-item__texts {
     background-color: rgba(250, 251, 252, 0.231372549);
-    color: #fafafa;
+    color: hsl(0deg, 0%, 98%);
     height: 80%;
     width: 100%;
     margin-top: -32rem;
     padding: 4rem 7rem;
   }
   .product-item__picture {
-    background: url(../img/behar-zenuni-797461-unsplash-scaled.jpg) no-repeat;
+    background: url(../img/fundas/behar-zenuni-797461-unsplash-scaled.jpg) no-repeat;
     background-size: 800px 700px;
+  }
+  .auri {
+    display: flex;
+    justify-content: space-around;
+    gap: 2rem;
+  }
+  .product-auri {
+    display: flex;
+    width: 49%;
+    height: 300px;
+    background-color: #dbebfd;
+    border-radius: 2rem;
+    overflow: hidden;
+    margin: 3rem 0;
+  }
+  .product-auri__texts {
+    font-size: 1rem;
+    height: 100%;
+    width: 100%;
+    padding: 3rem 3rem;
+  }
+  .product-auri2 {
+    display: flex;
+    width: 49%;
+    height: 300px;
+    background-color: #efeff0;
+    border-radius: 2rem;
+    overflow: hidden;
+    margin: 3rem 0;
+  }
+  .product-auri2__texts {
+    height: 100%;
+    width: 100%;
+    padding: 3rem 3rem;
+  }
+  .footer__title {
+    font-size: 2rem;
+  }
+  .footer__newsletter {
+    font-size: 1.6rem;
   }
 }

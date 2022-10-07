@@ -1,11 +1,12 @@
-$primary-color: #fafafa;
+$primary-color: hsl(0, 0%, 98%);
 $secondary-color: hsl(0, 0%, 33%);
-$terciary-color: #8cb9f8;
-$four-color: #b0d4fa;
-$black-color: rgba(0, 0, 0, 0.8);
-$highlight: #66a6ff;
-$highlight2: #71abfc;
-$bg-color: rgba(255, 255, 255, 0.9);
+$terciary-color: hsl(215, 89%, 76%);
+$four-color: hsl(211, 88%, 84%);
+$black-color: hsla(0, 0%, 0%, 0.8);
+$highlight: hsl(215, 100%, 70%);
+$highlight2: hsl(215, 96%, 72%);
+$bg-color: hsla(0, 0%, 100%, 0.9);
+$bg-color2: hsla(0, 0%, 0%, 0.78);
 $font-title: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 $font-text: 'Sen', sans-serif;
 $box-shadow: 1px 1px 20px 2px rgba(100, 100, 100, 0.1);
@@ -65,7 +66,6 @@ header {
     backdrop-filter: saturate(180%) blur(20px);
     border-bottom: 0.2px solid rgba(212, 212, 212, 0.575);
     box-shadow: $box-shadow;
-
 
     nav {
         width: 90%;
@@ -304,17 +304,18 @@ header {
     &__picture {
         width: 100%;
         height: 350px;
-        background: url(../img/behar-zenuni-797461-unsplash-scaled.jpg)no-repeat;
+        background: url(../img/fundas/behar-zenuni-797461-unsplash-scaled.jpg)no-repeat;
         background-size: 550px;
         background-position: right;
     }
 }
 
+
 .product-item2 {
     width: 100%;
     height: 350px;
     border-radius: 2rem;
-    background-color: #000000c7;
+    background-color: $bg-color2;
     overflow: hidden;
     margin-bottom: 2rem;
 
@@ -347,20 +348,49 @@ header {
     &__picture {
         width: 100%;
         height: 450px;
-        background: url(../img/max-simonov-Zxxxrc4a7uY-unsplash.jpg)no-repeat;
+        background: url(../img/fundas/max-simonov-Zxxxrc4a7uY-unsplash.jpg) no-repeat;
         background-size: 850px;
+    }
+    &__picture3 {
+        width: 100%;
+        height: 450px;
+        background: url(../img/fundas/max-simonov-Zxxxrc4a7uY-unsplash.jpg) no-repeat;
+        background-size: 1200px;
     }
 }
 
+.auri{
+    display: flex;
+    justify-content: space-around;
+}
 .product-auri {
-    width: 50%;
+    display: flex;
+    width: 48%;
     height: 300px;
-    background-color: #b0d4fa;
+    background-color: #dbebfd;
     border-radius: 2rem;
     overflow: hidden;
     margin: 3rem 0;
+    &__texts {
+        height: 100%;
+        width: 100%;
+        padding: 4rem 7rem;
+    }
 }
-
+.product-auri2 {
+    display: flex;
+    width: 48%;
+    height: 300px;
+    background-color: #efeff0;
+    border-radius: 2rem;
+    overflow: hidden;
+    margin: 3rem 0;
+    &__texts {
+        height: 100%;
+        width: 100%;
+        padding: 4rem 7rem;
+    }
+}
 
 .subtitle {
     font-size: 3.5rem;
@@ -421,29 +451,112 @@ header {
 
 /*---------------FOOTER-------------*/
 
-.footer {
-    &__menu {
-        width: 100%;
-        height: 20rem;
-        background-color: beige;
-        gap: 1rem;
+.footer{
+    background-color: $bg-color2;
 
-        &--siguenos {
-            background-color: aquamarine;
-            grid-area: siguenos;
-        }
+    &__container{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-bottom: 1px solid #fff;
+        padding-bottom: 60px;
+    }
 
-        &--links-utiles {
-            background-color: orange;
-            grid-area: links-utiles;
-        }
+    &__title{
+        font-size: 3.5rem;
+        margin-bottom: 30px;
+        background: linear-gradient(to right, #2980B9, #7fb6f1);
+        background-clip: text;
+        color: transparent;
+    }
+    &__form{
+        top: 50%;
+    }
+    &__newsletter{
+        font-size: 3rem;
+        color: $primary-color;
+        font-weight: 600;
+    }
+    &__inputs{
+        margin-top: 10px;
+        display: flex;
+        overflow: hidden;
+    }
+    
+    &__input{
+        background-color: #fff;
+        height: 50px;
+        display: block;
+        padding-left: 10px;
+        border-radius: 6px;
+        font-size: 1rem;
+        outline: none;
+        border: none;
+        margin-right: 16px;
+    }
+    &__submit{
+        margin-left: auto;
+        display: inline-block;
+        height: 50px;
+        padding: 0 20px ;
+        background-color: #2091F9;
+        border: none;
+        font-size: 1.6rem;
+        color: #fff;
+        border-radius: 30px;
+        cursor: pointer;
+    }
+    &__copy{
+        --padding-container: 30px 0;
+        text-align: center;
+        color: #fff;
+    }
+    &__copyright{
+        font-weight: 300;
+    }
+    &__icons{
+        font-size: 4rem;
+        padding: 0 2rem;
+        margin-bottom: 10px;
+        color: $bg-color;
 
-        &--legal {
-            background-color: greenyellow;
-            grid-area: legal;
-        }
+    }
+    &__img{
+        width: 40px;
     }
 }
+
+.nav{
+    &--footer{
+        padding-bottom: 20px;
+        display: grid;
+        gap: 1em;
+        grid-auto-flow: row;
+        height: 100%;
+    }
+    &__link--footer{
+        display: flex;
+        margin: 0;
+        margin-right: 20px;
+        flex-wrap: wrap;
+    }
+    &__links{
+        text-decoration: none;
+        color: $primary-color;
+        font-size: 1.8rem;
+    }
+    &__linke{
+        gap: 2em;
+    }
+    
+    &__items{
+        list-style: none;
+    }
+
+}
+
+
+
 
 
 /*---------------MEDIAQUERYS--------------*/
@@ -463,6 +576,37 @@ header {
 
     .toggle-menu.active span:nth-child(3) {
         transform: translateY(-0.8rem) rotate(-135deg);
+    }
+
+    .subtitle {
+        font-size: 2.5rem;
+        margin-bottom: 0rem;
+    }
+    .cta {
+        position: relative;
+        display: inline-block;
+        background-color: $highlight;
+        border: 2px solid $highlight;
+        justify-self: center;
+        color: #fff;
+        text-decoration: none;
+        padding: 11px 25px;
+        font-size: 1.5rem;
+        transition: color 0.5s, background 0.5s;
+    
+        &:hover {
+            color: $highlight;
+            background-color: transparent;
+    
+        }
+    
+        &--dark {
+            color: $highlight;
+        }
+    }
+    
+    .cta.round {
+        border-radius: 30px;
     }
 
     .main-menu.active {
@@ -494,16 +638,13 @@ header {
             justify-content: left;
             width: 100%;
             line-height: 4rem;
-
             border-bottom: 0.2px solid rgba(212, 212, 212, 0.575);
 
             &:hover {
                 font-size: 1.8rem;
                 background-color: $four-color;
             }
-
         }
-
         &__link {
             display: block;
             width: 100%;
@@ -516,12 +657,9 @@ header {
 
 
     .main-menu__link {
-
         &:hover {
             opacity: 0.7;
-
         }
-
         &:hover::before {
             display: none;
         }
@@ -543,7 +681,6 @@ header {
         right: -3%;
         background-color: rgba(170, 169, 169, 0.5);
     }
-
 
     .product-item {
         width: 100%;
@@ -567,11 +704,51 @@ header {
 
         &__picture {
 
-            background: url(../img/behar-zenuni-797461-unsplash-scaled.jpg)no-repeat;
+            background: url(../img/fundas/behar-zenuni-797461-unsplash-scaled.jpg)no-repeat;
             background-size: 800px 700px;
 
         }
     }
-
-
+    .auri{
+        display: flex;
+        justify-content: space-around;
+        gap: 2rem;
+    }
+    .product-auri {
+        display: flex;
+        width: 49%;
+        height: 300px;
+        background-color: #dbebfd;
+        border-radius: 2rem;
+        overflow: hidden;
+        margin: 3rem 0;
+        
+        &__texts {
+            font-size: 1rem;
+            height: 100%;
+            width: 100%;
+            padding: 3rem 3rem;
+        }
+    }
+    .product-auri2 {
+        display: flex;
+        width: 49%;
+        height: 300px;
+        background-color: #efeff0;
+        border-radius: 2rem;
+        overflow: hidden;
+        margin: 3rem 0;
+        &__texts {
+            height: 100%;
+            width: 100%;
+            padding: 3rem 3rem;
+        }
+    }
+    
+    .footer__title{
+        font-size: 2rem;
+    }
+    .footer__newsletter{
+        font-size: 1.6rem;
+    }
 }
