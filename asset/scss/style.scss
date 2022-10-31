@@ -1,15 +1,20 @@
+$whitecolor: hsl(0, 0%, 100%);
 $primary-color: hsl(0, 0%, 98%);
-$secondary-color: hsl(0, 0%, 33%);
-$terciary-color: hsl(215, 89%, 76%);
-$four-color: hsl(211, 88%, 84%);
+$secondary-color: hsl(0, 0%, 50%);
+$terciary-color: hsl(204, 64%, 44%);
+$four-color: hsl(180, 3%, 94%);
+$five-color:hsl(0, 0%, 82%);
+$six-color: hsl(149, 100%, 33%);
 $black-color: hsla(0, 0%, 0%, 0.8);
 $highlight: hsl(215, 100%, 70%);
-$highlight2: hsl(215, 96%, 72%);
-$bg-color: hsla(0, 0%, 100%, 0.9);
+$highlight2: hsl(212, 89%, 93%);
+$bg-color: hsla(0, 0%, 97%, 0.973);
 $bg-color2: hsla(0, 0%, 0%, 0.78);
+$bg-color3: hsla(0, 12%, 97%, 0.966);
 $font-title: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 $font-text: 'Sen', sans-serif;
-$box-shadow: 1px 1px 20px 2px rgba(100, 100, 100, 0.1);
+$box-shadow: 1px 1px 15px 2px rgba(100, 100, 100, 0.2);
+$box-shadow2: 1px 1px 5px 1px rgba(100, 100, 100, 0.2);
 $padding-container: 5rem 0;
 
 
@@ -40,18 +45,13 @@ html {
     font-family: $font-title;
 }
 
-body::selection {
-    background-color: $secondary-color;
-    color: $primary-color;
-}
-
 a {
     text-decoration: none;
 }
 
 body {
     font-family: $font-title;
-    background-color: $bg-color;
+    background-color: $primary-color;
 }
 
 /*---------------ENCABEZADO--------------*/
@@ -179,20 +179,22 @@ header {
 
 .container-slider {
     padding: 0;
-    width: 80%;
-    max-width: 1100px;
+    width: 100%;
+    height: 55rem;
+    max-width: 1400px;
     position: relative;
     overflow: hidden;
-    margin-top: 7rem;
-    margin: 7rem auto 0;
+    margin: 6.2rem auto 0;
+    
 }
 
 .slider {
     display: flex;
     width: 500%;
-    height: 400px;
+    height: 430px;
     margin-left: -100%;
-
+    background-color: $whitecolor;
+    padding-top: 2rem;
     &__section {
         width: 100%;
     }
@@ -200,15 +202,19 @@ header {
     &__img {
         margin: 0 auto;
         display: block;
-        height: 100%;
+        height: 93%;
         max-width: 100%;
+        transition: transform .4s ease-in-out;
+        &:hover{
+            transform: scale(1.03);
+        }
     }
 
     &__btn {
         font-size: 4rem;
         position: absolute;
         transform: translateY(-50%);
-        top: 40%;
+        top: 36%;
         cursor: pointer;
         color: $highlight2;
         opacity: .5;
@@ -220,11 +226,11 @@ header {
         }
 
         &--left {
-            left: 2%;
+            left: 25%;
         }
 
         &--right {
-            right: 2%;
+            right: 25%;
 
         }
     }
@@ -242,6 +248,7 @@ header {
     background: linear-gradient(to right, #2980B9, #b0d4fa);
     background-clip: text;
     color: transparent;
+    
 }
 
 .tuestilo h2::before {
@@ -278,17 +285,18 @@ header {
     text-align: left;
 }
 
-/*----------PAGINA AURICULARES CONTENIDO----------*/
+/*----------INDEX AURICULARES----------*/
 
 
 .product-item {
-    width: 100%;
+    width: 99%;
     height: 350px;
     border-radius: 2rem;
     background-color: #f6faff;
     overflow: hidden;
-    margin-bottom: 2rem;
-
+    margin-bottom: 4rem;
+    margin-left: auto;
+    box-shadow: $box-shadow2;
     &__product1 {
         height: 100%;
         height: 400px;
@@ -310,14 +318,16 @@ header {
     }
 }
 
-
 .product-item2 {
-    width: 100%;
+    width: 99%;
     height: 350px;
     border-radius: 2rem;
     background-color: $bg-color2;
     overflow: hidden;
-    margin-bottom: 2rem;
+    margin-bottom: 5rem;
+    margin-left: auto;
+    box-shadow: $box-shadow2;
+
 
     & {
         height: 400px;
@@ -362,7 +372,9 @@ header {
 .auri{
     display: flex;
     justify-content: space-around;
+    background-color: transparent;
 }
+
 .product-auri {
     display: flex;
     width: 48%;
@@ -370,26 +382,48 @@ header {
     background-color: #dbebfd;
     border-radius: 2rem;
     overflow: hidden;
-    margin: 3rem 0;
+    margin: 2rem 0;
+    box-shadow: $box-shadow2;
     &__texts {
-        height: 100%;
-        width: 100%;
-        padding: 4rem 7rem;
+        position: absolute;
+        padding: 5rem 7rem;
     }
+    &__picture{
+        position: relative;
+        display: flex;
+        align-items:baseline;
+        right: -35%;
+        cursor: pointer;
+        transition: transform .3s ease-in-out;
+        &:hover{
+            transform: scale(1.1);
+        }
+        }
 }
 .product-auri2 {
     display: flex;
     width: 48%;
     height: 300px;
-    background-color: #efeff0;
+    background-color: #f4f4f7;
     border-radius: 2rem;
     overflow: hidden;
-    margin: 3rem 0;
+    margin: 2rem 0;
+    box-shadow: $box-shadow2;
     &__texts {
-        height: 100%;
-        width: 100%;
-        padding: 4rem 7rem;
+        position: absolute;
+        padding: 5rem 7rem;
     }
+    &__picture{
+        position: relative;
+        display: flex;
+        align-items:baseline;
+        right: -35%;
+        cursor: pointer;
+        transition: transform .3s ease-in-out;
+        &:hover{
+            transform: scale(1.1);
+        }
+        }
 }
 
 .subtitle {
@@ -399,11 +433,10 @@ header {
 
 .container {
     width: 90%;
-    max-width: 1200px;
+    max-width: 1400px;
     margin: 0 auto;
     overflow: hidden;
     padding: $padding-container;
-    margin-bottom: 0rem;
 }
 
 .cta {
@@ -416,12 +449,12 @@ header {
     text-decoration: none;
     padding: 13px 30px;
     font-size: 1.8rem;
-    transition: color 0.5s, background 0.5s;
+    transition: opacity 0.3s, transform 0.3s ease;
+    opacity: .8;
 
     &:hover {
-        color: $highlight;
-        background-color: transparent;
-
+        opacity: 1;
+        transform: scale(1.05);
     }
 
     &--dark {
@@ -449,77 +482,85 @@ header {
     }
 }
 
+/*---------------BENEFICIOS------------*/
+.benefits{
+    text-align: center;
+    background-color: $bg-color3;
+    border-radius: 1.5rem;
+    box-shadow: $box-shadow2;
+    margin: 0 auto;
+    
+    &__table{
+        display: flex;
+        flex-wrap: wrap;
+        gap: 2rem;
+        justify-content: space-evenly;
+    }
+    &__icon{
+        font-size: 2.8rem;
+        color: $terciary-color;
+    }
+    &__elements{
+        padding: 0 1rem;
+        text-align:left;
+        color: $bg-color2;
+        gap: 1;
+        width: 200px;
+    }
+    &__title{
+        padding-top: 1.5rem;
+        font-size: 1.7rem;
+        text-transform: uppercase;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    &__paragragh{
+        padding-top: 1rem;
+        font-size: 1.1rem;
+        text-transform: uppercase;
+        color: $black-color;
+        font-style: italic;
+    }
+}
+
 /*---------------FOOTER-------------*/
 
 .footer{
     background-color: $bg-color2;
-
+    height: 260px;
+    margin-top: auto;
     &__container{
         display: flex;
         justify-content: space-between;
         align-items: center;
-        border-bottom: 1px solid #fff;
-        padding-bottom: 60px;
+        margin: 0 auto;
+        padding-top: 3.5rem;
     }
 
     &__title{
-        font-size: 3.5rem;
-        margin-bottom: 30px;
+        font-size: 2.5rem;
         background: linear-gradient(to right, #2980B9, #7fb6f1);
         background-clip: text;
         color: transparent;
     }
-    &__form{
-        top: 50%;
-    }
-    &__newsletter{
-        font-size: 3rem;
-        color: $primary-color;
-        font-weight: 600;
-    }
-    &__inputs{
-        margin-top: 10px;
-        display: flex;
-        overflow: hidden;
-    }
-    
-    &__input{
-        background-color: #fff;
-        height: 50px;
-        display: block;
-        padding-left: 10px;
-        border-radius: 6px;
-        font-size: 1rem;
-        outline: none;
-        border: none;
-        margin-right: 16px;
-    }
-    &__submit{
-        margin-left: auto;
-        display: inline-block;
-        height: 50px;
-        padding: 0 20px ;
-        background-color: #2091F9;
-        border: none;
-        font-size: 1.6rem;
-        color: #fff;
-        border-radius: 30px;
-        cursor: pointer;
-    }
+
     &__copy{
-        --padding-container: 30px 0;
         text-align: center;
         color: #fff;
+        padding: 2rem 0;
     }
     &__copyright{
         font-weight: 300;
+        margin-top: 2.5rem;
+        opacity: .4;
     }
     &__icons{
-        font-size: 4rem;
+        font-size: 3.5rem;
         padding: 0 2rem;
-        margin-bottom: 10px;
-        color: $bg-color;
-
+        color: $five-color;
+        transition: .5s ease;
+        &:hover{
+            color: #7fb6f1;
+        }
     }
     &__img{
         width: 40px;
@@ -528,27 +569,28 @@ header {
 
 .nav{
     &--footer{
-        padding-bottom: 20px;
-        display: grid;
-        gap: 1em;
-        grid-auto-flow: row;
+        padding-bottom: 2rem;
         height: 100%;
+        text-align: center;
+        margin: 0 auto;
     }
     &__link--footer{
+        padding-top: 20px;
+        width: 100%;
         display: flex;
-        margin: 0;
-        margin-right: 20px;
-        flex-wrap: wrap;
+        justify-content: space-around;
+        text-align: center;
     }
     &__links{
         text-decoration: none;
-        color: $primary-color;
-        font-size: 1.8rem;
-    }
-    &__linke{
-        gap: 2em;
-    }
-    
+        color: $five-color;
+        font-size: 1.5rem;
+        opacity: .6;
+        transition: opacity .5s ease;
+        &:hover{
+            opacity: 1;
+        }
+    }    
     &__items{
         list-style: none;
     }
@@ -556,12 +598,111 @@ header {
 }
 
 
+/*-----------PAGINA AURICULARES------------*/
 
+/*---CARDS DE AURICULARES---*/
 
+.headphones{
+    width: 95%;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    overflow: hidden;
+    padding-top: 5rem;
+    margin-bottom: 5rem;
+
+    &__texts{
+        justify-content: center;
+        text-align: center;
+    }
+    &__cable{
+        max-width: 1000px;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 3rem;
+    }
+
+    &__product{
+        overflow: hidden;
+        background-color: $primary-color;
+        width: 30rem;
+        height: 45rem;
+        border-radius: 2rem;
+        box-shadow: $box-shadow2;
+    }
+    &__picture{
+        display: flex;
+        justify-content: center; 
+        width: 100%;
+        background-color: $whitecolor;
+        box-shadow: $box-shadow2;
+        
+        img{
+            width: 190px;
+            top: -10%;
+            transform: translateY(0px);
+            transition: transform .3s ease;
+            &:hover{
+                transform: translateY(-5px);
+            }
+        }
+    }
+    &__subtitle{
+        font-size: 3rem;
+        color: $bg-color2;
+        margin: 1rem;
+    }
+    &__paragraph{
+        font-weight: bold;
+        font-size: 1.5rem;
+        color: $six-color;
+    }
+}
+
+.button{
+    margin-top: 1rem;
+}
+.round2{
+    width: 70%;
+    position: relative;
+    display: inline-block;
+    text-align: center;
+    justify-self: center;
+    font-size: small;
+    background-color: $highlight;
+    border: solid 2px $highlight;
+    color: $primary-color;
+    font-family: $font-text;
+    padding: 12px 25px;
+    border-radius: 1.3rem;
+    margin: .5rem;
+    transition: transform .4s;
+    &:hover{
+        transform: scale(1.02);
+    }
+}
+.round3{
+    width: 70%;
+    position: relative;
+    display: inline-block;
+    justify-self: center;
+    border-radius: 1.3rem;
+    color: $highlight;
+    background-color: $highlight2;
+    border: solid 2px $highlight;
+    transition: opacity .3s ease-in-out;
+    text-decoration: none;
+    padding: 12px 25px;
+    font-size: small;
+    transition: transform .4s;
+    &:hover{
+        transform: scale(1.02);
+    }
+}
 
 /*---------------MEDIAQUERYS--------------*/
 
-@media screen and (max-width:900px) {
+@media screen and (max-width:700px) {
     .toggle-menu {
         display: block;
     }
@@ -581,32 +722,6 @@ header {
     .subtitle {
         font-size: 2.5rem;
         margin-bottom: 0rem;
-    }
-    .cta {
-        position: relative;
-        display: inline-block;
-        background-color: $highlight;
-        border: 2px solid $highlight;
-        justify-self: center;
-        color: #fff;
-        text-decoration: none;
-        padding: 11px 25px;
-        font-size: 1.5rem;
-        transition: color 0.5s, background 0.5s;
-    
-        &:hover {
-            color: $highlight;
-            background-color: transparent;
-    
-        }
-    
-        &--dark {
-            color: $highlight;
-        }
-    }
-    
-    .cta.round {
-        border-radius: 30px;
     }
 
     .main-menu.active {
@@ -654,8 +769,6 @@ header {
         }
     }
 
-
-
     .main-menu__link {
         &:hover {
             opacity: 0.7;
@@ -665,6 +778,40 @@ header {
         }
     }
 
+
+    .slider {
+        &__img {
+            margin: 0 auto;
+            display: block;
+            height: 87%;
+            max-width: 100%;
+            cursor: pointer;
+        }
+    
+        &__btn {
+            font-size: 4.5rem;
+            transform: translateY(-50%);
+            top: 35%;
+            z-index: 1;
+            &:hover {
+                opacity: 1;
+                color: $highlight2;
+            }
+    
+            &--left {
+                left: 8%;
+            }
+    
+            &--right {
+                right: 8%;
+    
+            }
+        }
+    }
+
+    .tuestilo{
+        font-size: 3rem;
+    }
     .tuestilo h2::before {
         bottom: 12%;
         left: 0%;
@@ -747,8 +894,30 @@ header {
     
     .footer__title{
         font-size: 2rem;
+        margin: 0 auto;
+        text-align: center;
     }
-    .footer__newsletter{
-        font-size: 1.6rem;
+    .nav{
+        &--footer{
+            padding-bottom: 0 px;
+            height: 100%;
+            margin: 0 auto;
+        }
+        &__link--footer{
+            padding-top: 20px;
+            width: 60%;
+            display: flex;
+            justify-content: space-around;
+            margin: 0 auto;
+        }
+        &__links{
+            text-decoration: none;
+            color: $primary-color;
+            font-size: 1.8rem;
+        }    
+        &__items{
+            list-style: none;
+        }
+    
     }
 }
