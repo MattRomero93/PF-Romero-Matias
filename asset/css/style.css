@@ -424,6 +424,11 @@ header nav ul li a:hover {
   overflow: hidden;
 }
 
+.paragraph {
+  font-size: 2rem;
+  color: hsla(0deg, 0%, 0%, 0.78);
+}
+
 /*---------------BENEFICIOS------------*/
 .benefits {
   text-align: center;
@@ -542,7 +547,7 @@ header nav ul li a:hover {
   text-align: center;
   overflow: hidden;
   padding-top: 5rem;
-  margin-bottom: 5rem;
+  margin: 0 auto;
 }
 .headphones__texts {
   justify-content: center;
@@ -553,25 +558,27 @@ header nav ul li a:hover {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 3rem;
+  margin-bottom: 5rem;
 }
 .headphones__product {
   overflow: hidden;
   background-color: hsl(0deg, 0%, 98%);
   width: 30rem;
-  height: 45rem;
+  height: 46rem;
   border-radius: 2rem;
   box-shadow: 1px 1px 5px 1px rgba(100, 100, 100, 0.2);
+  margin-bottom: 2rem;
 }
 .headphones__picture {
   display: flex;
   justify-content: center;
-  width: 100%;
   background-color: hsl(0deg, 0%, 100%);
   box-shadow: 1px 1px 5px 1px rgba(100, 100, 100, 0.2);
+  width: 300px;
+  height: 200px;
 }
 .headphones__picture img {
-  width: 190px;
-  top: -10%;
+  max-height: 200px;
   transform: translateY(0px);
   transition: transform 0.3s ease;
 }
@@ -588,9 +595,97 @@ header nav ul li a:hover {
   font-size: 1.5rem;
   color: hsl(149deg, 100%, 33%);
 }
+.headphones__paragraph--sin-stock {
+  color: red;
+}
+
+/*------CARDS FUNDAS-----*/
+.case {
+  width: 95%;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  overflow: hidden;
+  padding-top: 5rem;
+  margin: 0 auto;
+}
+.case__texts {
+  justify-content: center;
+  text-align: center;
+}
+.case__cable {
+  max-width: 1000px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 3rem;
+  margin-bottom: 5rem;
+}
+.case__product {
+  overflow: hidden;
+  background-color: hsl(0deg, 0%, 98%);
+  width: 30rem;
+  height: 46rem;
+  border-radius: 2rem;
+  box-shadow: 1px 1px 5px 1px rgba(100, 100, 100, 0.2);
+  margin-bottom: 2rem;
+}
+.case__picture {
+  display: flex;
+  justify-content: center;
+  background-color: hsl(0deg, 0%, 100%);
+  box-shadow: 1px 1px 5px 1px rgba(100, 100, 100, 0.2);
+  width: 300px;
+  height: 200px;
+}
+.case__picture--vintage {
+  background-color: #e7e1df;
+}
+.case__picture--violet {
+  background-color: #565881;
+}
+.case__picture--gray {
+  background-color: #bebbb4;
+}
+.case__picture img {
+  max-height: 200px;
+  transform: translateY(0px);
+  transition: transform 0.3s ease;
+}
+.case__picture img:hover {
+  transform: translateY(-5px);
+}
+.case__subtitle {
+  font-size: 3rem;
+  color: hsla(0deg, 0%, 0%, 0.78);
+  margin: 1rem;
+}
+.case__paragraph {
+  font-weight: bold;
+  font-size: 1.5rem;
+  color: hsl(149deg, 100%, 33%);
+}
+.case__paragraph--sin-stock {
+  color: red;
+}
+
+/*------NOSOTROS-------*/
+.nosotros-picture {
+  margin: 20px;
+  border-radius: 3rem;
+  width: 400px;
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+  box-shadow: 1px 1px 15px 2px rgba(100, 100, 100, 0.2);
+}
+.nosotros-picture img {
+  width: 400px;
+  border-radius: 3rem;
+}
 
 .button {
   margin-top: 1rem;
+  border-radius: 2rem;
 }
 
 .round2 {

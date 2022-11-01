@@ -482,6 +482,10 @@ header {
     }
 }
 
+.paragraph{
+    font-size: 2rem;
+    color: $bg-color2;
+}
 /*---------------BENEFICIOS------------*/
 .benefits{
     text-align: center;
@@ -609,7 +613,7 @@ header {
     text-align: center;
     overflow: hidden;
     padding-top: 5rem;
-    margin-bottom: 5rem;
+    margin: 0 auto;
 
     &__texts{
         justify-content: center;
@@ -620,26 +624,28 @@ header {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         gap: 3rem;
+        margin-bottom: 5rem;
     }
 
     &__product{
         overflow: hidden;
         background-color: $primary-color;
         width: 30rem;
-        height: 45rem;
+        height: 46rem;
         border-radius: 2rem;
         box-shadow: $box-shadow2;
+        margin-bottom: 2rem;
     }
     &__picture{
         display: flex;
         justify-content: center; 
-        width: 100%;
         background-color: $whitecolor;
         box-shadow: $box-shadow2;
+        width: 300px;
+        height: 200px;
         
         img{
-            width: 190px;
-            top: -10%;
+            max-height: 200px;
             transform: translateY(0px);
             transition: transform .3s ease;
             &:hover{
@@ -656,11 +662,103 @@ header {
         font-weight: bold;
         font-size: 1.5rem;
         color: $six-color;
+        &--sin-stock{
+            color: red;
+        }
+    }
+}
+
+
+/*------CARDS FUNDAS-----*/
+.case{
+    width: 95%;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    overflow: hidden;
+    padding-top: 5rem;
+    margin: 0 auto;
+
+    &__texts{
+        justify-content: center;
+        text-align: center;
+    }
+    &__cable{
+        max-width: 1000px;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 3rem;
+        margin-bottom: 5rem;
+    }
+
+    &__product{
+        overflow: hidden;
+        background-color: $primary-color;
+        width: 30rem;
+        height: 46rem;
+        border-radius: 2rem;
+        box-shadow: $box-shadow2;
+        margin-bottom: 2rem;
+    }
+    &__picture{
+        display: flex;
+        justify-content: center; 
+        background-color: $whitecolor;
+        box-shadow: $box-shadow2;
+        width: 300px;
+        height: 200px;
+        &--vintage{
+            background-color: #e7e1df;
+        }
+        &--violet{
+            background-color: #565881;
+        }
+        &--gray{
+            background-color: #bebbb4;
+        }
+        img{
+            max-height: 200px;
+            transform: translateY(0px);
+            transition: transform .3s ease;
+            &:hover{
+                transform: translateY(-5px);
+            }
+        }
+    }
+    &__subtitle{
+        font-size: 3rem;
+        color: $bg-color2;
+        margin: 1rem;
+    }
+    &__paragraph{
+        font-weight: bold;
+        font-size: 1.5rem;
+        color: $six-color;
+        &--sin-stock{
+            color: red;
+        }
+    }
+}
+
+/*------NOSOTROS-------*/
+
+.nosotros-picture{
+    margin: 20px;
+    border-radius: 3rem;
+    width: 400px;
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    box-shadow: $box-shadow;
+    img{
+        width: 400px;
+        border-radius: 3rem;
     }
 }
 
 .button{
     margin-top: 1rem;
+    border-radius: 2rem;
 }
 .round2{
     width: 70%;
