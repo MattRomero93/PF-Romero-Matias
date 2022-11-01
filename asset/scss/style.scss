@@ -39,6 +39,10 @@ $padding-container: 5rem 0;
     border-radius: 5px;
 }
 
+html, body{
+    max-width: 100% !important;
+    overflow-x: hidden !important;
+}
 html {
     scroll-behavior: smooth;
     font-size: 10px;
@@ -181,7 +185,7 @@ header {
     padding: 0;
     width: 100%;
     height: 55rem;
-    max-width: 1400px;
+    max-width: 1100px;
     position: relative;
     overflow: hidden;
     margin: 6.2rem auto 0;
@@ -800,7 +804,8 @@ header {
 
 /*---------------MEDIAQUERYS--------------*/
 
-@media screen and (max-width:700px) {
+
+@media screen and (max-width:750px) {
     .toggle-menu {
         display: block;
     }
@@ -881,15 +886,15 @@ header {
         &__img {
             margin: 0 auto;
             display: block;
-            height: 87%;
-            max-width: 100%;
+            height: 67%;
+            max-width: 80%;
             cursor: pointer;
         }
     
         &__btn {
-            font-size: 4.5rem;
+            font-size: 2.5rem;
             transform: translateY(-50%);
-            top: 35%;
+            top: 25%;
             z-index: 1;
             &:hover {
                 opacity: 1;
@@ -908,21 +913,21 @@ header {
     }
 
     .tuestilo{
-        font-size: 3rem;
+        font-size: 1.8rem;
     }
     .tuestilo h2::before {
-        bottom: 12%;
+        bottom: 14.5%;
         left: 0%;
         min-width: 15%;
-        height: 2px;
+        height: 1px;
         background-color: rgba(170, 169, 169, 0.5);
 
     }
 
     .tuestilo h2::after {
-        bottom: 12%;
+        bottom: 14.5%;
         min-width: 15%;
-        height: 2px;
+        height: 1px;
         right: -3%;
         background-color: rgba(170, 169, 169, 0.5);
     }
@@ -956,12 +961,13 @@ header {
     }
     .auri{
         display: flex;
+        flex-wrap: wrap;
         justify-content: space-around;
         gap: 2rem;
     }
     .product-auri {
         display: flex;
-        width: 49%;
+        width: 90%;
         height: 300px;
         background-color: #dbebfd;
         border-radius: 2rem;
@@ -969,7 +975,6 @@ header {
         margin: 3rem 0;
         
         &__texts {
-            font-size: 1rem;
             height: 100%;
             width: 100%;
             padding: 3rem 3rem;
@@ -977,7 +982,7 @@ header {
     }
     .product-auri2 {
         display: flex;
-        width: 49%;
+        width: 90%;
         height: 300px;
         background-color: #efeff0;
         border-radius: 2rem;
@@ -988,6 +993,33 @@ header {
             width: 100%;
             padding: 3rem 3rem;
         }
+    }
+    .subtitle {
+        font-size: 2rem;
+        margin-bottom: 0rem;
+    }
+    .cta {
+        border: 2px solid $highlight;
+        justify-self: center;
+        color: #fff;
+        text-decoration: none;
+        padding: 9px 10px;
+        font-size: 1.8rem;
+        transition: opacity 0.3s, transform 0.3s ease;
+        opacity: .8;
+    
+        &:hover {
+            opacity: 1;
+            transform: scale(1.05);
+        }
+    
+        &--dark {
+            color: $highlight;
+        }
+    }
+    
+    .cta.round {
+        border-radius: 30px;
     }
     
     .footer__title{
@@ -1017,5 +1049,237 @@ header {
             list-style: none;
         }
     
+    }
+}
+
+@media screen and (min-width:400px){
+    .headphones{
+        width: 95%;
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        overflow: hidden;
+        padding-top: 5rem;
+        margin: 0 auto;
+    
+        &__texts{
+            justify-content: center;
+            text-align: center;
+        }
+        &__cable{
+            max-width: 1000px;
+            display: grid;
+            grid-template-columns: repeat(1, 1fr);
+            gap: 3rem;
+            margin-bottom: 5rem;
+        }
+    
+        &__product{
+            overflow: hidden;
+            background-color: $primary-color;
+            width: 30rem;
+            height: 46rem;
+            border-radius: 2rem;
+            box-shadow: $box-shadow2;
+            margin-bottom: 2rem;
+        }
+        &__picture{
+            display: flex;
+            justify-content: center; 
+            background-color: $whitecolor;
+            box-shadow: $box-shadow2;
+            width: 300px;
+            height: 200px;
+            
+            img{
+                max-height: 200px;
+                transform: translateY(0px);
+                transition: transform .3s ease;
+                &:hover{
+                    transform: translateY(-5px);
+                }
+            }
+        }
+        &__subtitle{
+            font-size: 3rem;
+            color: $bg-color2;
+            margin: 1rem;
+        }
+        &__paragraph{
+            font-weight: bold;
+            font-size: 1.5rem;
+            color: $six-color;
+            &--sin-stock{
+                color: red;
+            }
+        }
+    }
+    .case{
+        width: 95%;
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        overflow: hidden;
+        padding-top: 5rem;
+        margin: 0 auto;
+    
+        &__texts{
+            justify-content: center;
+            text-align: center;
+        }
+        &__cable{
+            max-width: 1000px;
+            display: grid;
+            grid-template-columns: repeat(1, 1fr);
+            gap: 3rem;
+            margin-bottom: 5rem;
+        }
+    
+        &__product{
+            overflow: hidden;
+            background-color: $primary-color;
+            width: 30rem;
+            height: 46rem;
+            border-radius: 2rem;
+            box-shadow: $box-shadow2;
+            margin-bottom: 2rem;
+        }
+        &__picture{
+            display: flex;
+            justify-content: center; 
+            background-color: $whitecolor;
+            box-shadow: $box-shadow2;
+            width: 300px;
+            height: 200px;
+            &--vintage{
+                background-color: #e7e1df;
+            }
+            &--violet{
+                background-color: #565881;
+            }
+            &--gray{
+                background-color: #bebbb4;
+            }
+            img{
+                max-height: 200px;
+                transform: translateY(0px);
+                transition: transform .3s ease;
+                &:hover{
+                    transform: translateY(-5px);
+                }
+            }
+        }
+        &__subtitle{
+            font-size: 3rem;
+            color: $bg-color2;
+            margin: 1rem;
+        }
+        &__paragraph{
+            font-weight: bold;
+            font-size: 1.5rem;
+            color: $six-color;
+            &--sin-stock{
+                color: red;
+            }
+        }
+    }
+    
+}
+@media screen and (min-width:700px){
+    .headphones{
+
+        &__cable{
+            grid-template-columns: repeat(2, 1fr);
+            gap: 3rem;
+            margin-bottom: 5rem;
+        }
+    
+        &__product{
+            width: 35rem;
+        }
+        &__picture{
+            width: 350px;
+            
+            img{
+                max-height: 200px;
+                transform: translateY(0px);
+                transition: transform .3s ease;
+                &:hover{
+                    transform: translateY(-5px);
+                }
+            }
+        }
+    }
+    .case{
+
+        &__cable{
+            grid-template-columns: repeat(2, 1fr);
+            gap: 3rem;
+            margin-bottom: 5rem;
+        }
+    
+        &__product{
+            width: 35rem;
+        }
+        &__picture{
+            width: 350px;
+            &--vintage{
+                background-color: #e7e1df;
+            }
+            &--violet{
+                background-color: #565881;
+            }
+            &--gray{
+                background-color: #bebbb4;
+            }
+            img{
+                max-height: 200px;
+                transform: translateY(0px);
+                transition: transform .3s ease;
+                &:hover{
+                    transform: translateY(-5px);
+                }
+            }
+        }
+    }
+}
+@media screen and (min-width:1020px){
+    .headphones{
+        &__cable{
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 3rem;
+            margin-bottom: 5rem;
+        }
+        &__product{
+            width: 30rem;
+        }
+        &__picture{
+            width: 300px;
+
+        }
+    }
+    .case{
+        &__cable{
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 3rem;
+            margin-bottom: 5rem;
+        }
+        &__product{
+            width: 30rem;
+        }
+        &__picture{
+            width: 300px;
+            &--vintage{
+                background-color: #e7e1df;
+            }
+            &--violet{
+                background-color: #565881;
+            }
+            &--gray{
+                background-color: #bebbb4;
+            }
+        }
     }
 }
